@@ -1,12 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-hmj-crema: #F5E6D3;
+  --color-hmj-naranja: #D97736;
+  --color-hmj-naranja-dark: #A65322;
+  --color-hmj-cafe: #593825;
+  --color-hmj-cafe-dark: #331E12;
+  --color-hmj-verde: #415939;
+  --color-hmj-verde-dark: #2A3B24;
+  --color-hmj-ocre: #B28F3B;
+  --color-hmj-tierra: #8C6A4B;
+  --color-hmj-bg: #1A1412;
+}
 
 html, body, #root {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-hmj-bg);
+  color: var(--color-hmj-crema);
 }

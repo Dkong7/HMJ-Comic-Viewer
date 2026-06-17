@@ -31,13 +31,13 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('home');
 
   return (
-    <div className="min-h-screen bg-black text-neutral-300 font-sans selection:bg-orange-500/30">
-      <header className="border-b border-neutral-800 bg-neutral-950/80 backdrop-blur sticky top-0 z-50">
+    <div className="min-h-screen bg-hmj-bg text-hmj-crema font-sans selection:bg-hmj-naranja/30">
+      <header className="border-b border-hmj-cafe bg-hmj-cafe-dark/80 backdrop-blur sticky top-0 z-50 shadow-md">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold tracking-tighter text-white">HMJ <span className="text-orange-500 text-sm align-top tracking-widest">PROJECT</span></h1>
+          <h1 className="text-2xl font-bold tracking-tighter text-hmj-crema">HMJ <span className="text-hmj-naranja text-sm align-top tracking-widest">PROJECT</span></h1>
           <nav className="flex gap-6 text-sm uppercase tracking-wider font-semibold">
-            <button onClick={() => setActiveTab('home')} className={`hover:text-orange-400 transition ${activeTab === 'home' ? 'text-orange-500' : ''}`}>Lore & TCG</button>
-            <button onClick={() => setActiveTab('comic')} className={`hover:text-orange-400 transition ${activeTab === 'comic' ? 'text-orange-500' : ''}`}>Leer Cómic</button>
+            <button onClick={() => setActiveTab('home')} className={`hover:text-hmj-ocre transition ${activeTab === 'home' ? 'text-hmj-naranja' : ''}`}>Lore & TCG</button>
+            <button onClick={() => setActiveTab('comic')} className={`hover:text-hmj-ocre transition ${activeTab === 'comic' ? 'text-hmj-naranja' : ''}`}>Leer Cómic</button>
           </nav>
         </div>
       </header>
@@ -55,28 +55,28 @@ function HomeTab() {
   return (
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="p-6 py-12 flex flex-col gap-12">
       <section className="text-center max-w-3xl mx-auto">
-        <h2 className="text-5xl font-bold text-white mb-6 tracking-tight">El sonido altera la realidad.</h2>
-        <p className="text-lg text-neutral-400 leading-relaxed">
+        <h2 className="text-5xl font-bold text-hmj-crema mb-6 tracking-tight drop-shadow-md">El sonido altera la realidad.</h2>
+        <p className="text-lg text-hmj-crema/80 leading-relaxed font-medium">
           Harmony Monster Journey explora la tensión fundamental entre la creación orgánica y la producción artificial.
           En Vibralia, los Echoz despiertan cuando la música se convierte en invocación.
         </p>
       </section>
 
       <div className="grid md:grid-cols-3 gap-6 mt-8">
-        <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-orange-500/50 transition duration-300">
-          <BookOpen className="text-orange-500 mb-4" size={32} />
-          <h3 className="text-xl font-bold text-white mb-2">El Cómic</h3>
-          <p className="text-neutral-400 text-sm leading-relaxed">4 Sagas. Desde la Resonancia Cotidiana hasta el Resonance Collapse. Lee los tomos interactivos con audio dinámico.</p>
+        <div className="bg-hmj-cafe-dark border border-hmj-cafe p-6 rounded-xl shadow-lg hover:border-hmj-naranja/50 transition duration-300 hover:-translate-y-1">
+          <BookOpen className="text-hmj-naranja mb-4" size={32} />
+          <h3 className="text-xl font-bold text-hmj-crema mb-2">El Cómic</h3>
+          <p className="text-hmj-crema/70 text-sm leading-relaxed">4 Sagas. Desde la Resonancia Cotidiana hasta el Resonance Collapse. Lee los tomos interactivos con audio dinámico.</p>
         </div>
-        <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-green-500/50 transition duration-300">
-          <Map className="text-green-500 mb-4" size={32} />
-          <h3 className="text-xl font-bold text-white mb-2">Juego de Cartas (TCG)</h3>
-          <p className="text-neutral-400 text-sm leading-relaxed">Colecciona fragmentos sonoros, técnicas de batalla y Echoz. Combina frecuencias para abrir portales.</p>
+        <div className="bg-hmj-verde-dark border border-hmj-verde p-6 rounded-xl shadow-lg hover:border-hmj-ocre/50 transition duration-300 hover:-translate-y-1">
+          <Map className="text-hmj-ocre mb-4" size={32} />
+          <h3 className="text-xl font-bold text-hmj-crema mb-2">Juego de Cartas (TCG)</h3>
+          <p className="text-hmj-crema/70 text-sm leading-relaxed">Colecciona fragmentos sonoros, técnicas de batalla y Echoz. Combina frecuencias para abrir portales.</p>
         </div>
-        <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-purple-500/50 transition duration-300">
-          <Music className="text-purple-500 mb-4" size={32} />
-          <h3 className="text-xl font-bold text-white mb-2">Banda Sonora</h3>
-          <p className="text-neutral-400 text-sm leading-relaxed">Música evolutiva que muta dependiendo del Link Level de los personajes. Hip hop ritual, reggae espiritual y distorsión punk.</p>
+        <div className="bg-hmj-cafe-dark border border-hmj-tierra p-6 rounded-xl shadow-lg hover:border-hmj-naranja/50 transition duration-300 hover:-translate-y-1">
+          <Music className="text-hmj-tierra mb-4" size={32} />
+          <h3 className="text-xl font-bold text-hmj-crema mb-2">Banda Sonora</h3>
+          <p className="text-hmj-crema/70 text-sm leading-relaxed">Música evolutiva que muta dependiendo del Link Level de los personajes. Hip hop ritual, reggae espiritual y distorsión punk.</p>
         </div>
       </div>
     </motion.div>
@@ -132,7 +132,7 @@ function ComicViewer() {
               <motion.div
                 initial={{ opacity: 0, y: 10, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                className="absolute bg-white text-black px-4 py-2 rounded-2xl rounded-tl-none font-bold shadow-xl max-w-xs"
+                className="absolute bg-hmj-crema text-hmj-cafe-dark px-4 py-2 rounded-2xl rounded-tl-none font-bold shadow-xl border border-hmj-cafe max-w-xs"
                 style={{ left: dialogue.x, top: dialogue.y }}
               >
                 {dialogue.text}
@@ -142,7 +142,7 @@ function ComicViewer() {
         ))}
       </div>
 
-      <div className="text-center mt-12 opacity-50 text-sm tracking-widest uppercase">
+      <div className="text-center mt-12 text-hmj-ocre/70 font-semibold text-sm tracking-widest uppercase">
         {revealedDialogues < panel.dialogues.length ? 'Clic para avanzar diálogo' : 'Clic para siguiente viñeta'}
       </div>
     </motion.div>
